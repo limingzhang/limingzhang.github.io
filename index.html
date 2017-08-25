@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/23/python/python安装/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/25/python/python模块/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张利明">
@@ -292,7 +292,447 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/23/python/python安装/" itemprop="url">python安装</a></h1>
+                <a class="post-title-link" href="/2017/08/25/python/python模块/" itemprop="url">python模块</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-25T13:41:49+08:00">
+                2017-08-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="BeautifulSoup-可以从HTML或XML文件中提取数据"><a href="#BeautifulSoup-可以从HTML或XML文件中提取数据" class="headerlink" title="BeautifulSoup 可以从HTML或XML文件中提取数据"></a>BeautifulSoup 可以从HTML或XML文件中提取数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">pip install beautifulsoup4 # 安装 beautifulsoup4 (python3)</div><div class="line"></div><div class="line">from bs4 import BeautifulSoup # 导入bs4模块的BeautifulSoup方法</div><div class="line"></div><div class="line">soup = BeautifulSoup(html, &apos;html.parser&apos;) # 从html解析成soup对象</div><div class="line">soup.find(&apos;div&apos;, attrs = &#123; &apos;class&apos;: &apos;total&apos; &#125;).getText()</div><div class="line">soup.find_all(&apos;div&apos;, attrs = &#123; &apos;class&apos;: &apos;total&apos; &#125;).getText()</div><div class="line"></div><div class="line">soup.prettify()</div><div class="line">soup.select(&apos;.title&apos;)</div><div class="line">soup.find_all() # 该方法搜索出符合 过滤器 条件的元素，查找到想要查找的文档内容</div><div class="line">soup.find_all(&apos;b&apos;)</div><div class="line"></div><div class="line">soup.&lt;tag&gt;.has_attr(&apos;class&apos;)</div><div class="line">soup.&lt;tag&gt;.name # 标签的名字</div><div class="line">soup.&lt;tag&gt;.attrs # 标签的属性</div><div class="line">soup.&lt;tag&gt;.string # 标签内非属性字符串</div><div class="line"></div><div class="line">soup.&lt;tag&gt;.contents # 子节点的列表， 将&lt;tag&gt;所有儿子节点存入列表</div><div class="line">soup.&lt;tag&gt;.children # 子节点的迭代类型， 用于循环遍历儿子节点</div><div class="line">soup.&lt;tag&gt;.descendants # 子孙节点的迭代类型， 用于循环遍历所有子孙节点</div><div class="line"></div><div class="line">soup.&lt;tag&gt;.parent # 节点的父亲标签</div><div class="line">soup.&lt;tag&gt;.parents # 节点的先辈标签的迭代类型， 用于循环遍历先辈节点</div><div class="line"></div><div class="line">soup.&lt;tag&gt;.next_sibling</div><div class="line">soup.&lt;tag&gt;.previous_sibling</div><div class="line">soup.&lt;tag&gt;.next_siblings</div><div class="line">soup.&lt;tag&gt;.previous_siblings</div></pre></td></tr></table></figure>
+<p>任何存在于HTML语法中的标签都可以用soup.<tag>访问获得<br>当HTML文档中存在多个相同<tag>对应内容时，soup.<tag>返回第一个</tag></tag></tag></p>
+<p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank" rel="external">BeautifulSoup英文帮助文档</a><br><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#id17" target="_blank" rel="external">BeautifulSoup中文帮助文档</a><br><a href="http://www.tuicool.com/articles/amM77zm" target="_blank" rel="external">Python爬虫之BeautifulSoup库的入门与使用</a></p>
+<h3 id="os-文件系统"><a href="#os-文件系统" class="headerlink" title="os 文件系统"></a>os 文件系统</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import os # 导入os模块</div><div class="line"></div><div class="line">os.getcwd() # 获取当前目录路径</div><div class="line">os.mkdir(path) # 创建目录</div><div class="line">os.path.exists(path) # 判断路径是否存在</div><div class="line">os.path.join(path, &apos;images&apos;) # 合并生成新的路径</div></pre></td></tr></table></figure>
+<h3 id="re-正则表达式"><a href="#re-正则表达式" class="headerlink" title="re 正则表达式"></a>re 正则表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import re</div><div class="line"></div><div class="line">re.compile(&quot;^b&quot;) # 匹配b开头的</div><div class="line">re.sub(&apos;\D&apos;, &apos;&apos;, string) # 字符串替换</div></pre></td></tr></table></figure>
+<h3 id="requests-网络请求"><a href="#requests-网络请求" class="headerlink" title="requests 网络请求"></a>requests 网络请求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">pip install requests # 安装 requests (python3)</div><div class="line"></div><div class="line">headers = &#123; &apos;User-Agent&apos;: &apos;Mozilla/5.0 Gecko/20100101 Firefox/52.0&apos; &#125;</div><div class="line">params = &#123; &apos;page&apos;: 10 &#125;</div><div class="line"></div><div class="line">import requests # 导入requests模块</div><div class="line"></div><div class="line">r = requests.get(url) # 获取html文件</div><div class="line">r = requests.get(url, stream = True) # 获取图片</div><div class="line">r = requests.get(url, headers = headers) # 添加headers，指定User-Agent，伪装成浏览器</div><div class="line">r = requests.get(url, params = params) # 添加params，给url添加查询字符串</div><div class="line"></div><div class="line">r.status_code # 状态码</div><div class="line">r.apparent_encoding #</div><div class="line">r.encoding # 编码格式</div><div class="line">r.text # 请求返回的文字</div><div class="line">r.content # 请求返回的内容-处理过</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/24/python/python爬虫(1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张利明">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myblog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/24/python/python爬虫(1)/" itemprop="url">python爬虫(1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-24T16:50:49+08:00">
+                2017-08-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h2><h3 id="爬虫学习3阶段"><a href="#爬虫学习3阶段" class="headerlink" title="爬虫学习3阶段"></a>爬虫学习3阶段</h3><ul>
+<li>第一阶段是入门，掌握必备的基础知识</li>
+<li>第二阶段是模仿，跟着别人的爬虫代码学，弄懂每一行代码</li>
+<li>第三阶段是自己动手，这个阶段你开始有自己的解题思路了，可以独立设计爬虫系统</li>
+</ul>
+<h3 id="爬虫需要学习的知识"><a href="#爬虫需要学习的知识" class="headerlink" title="爬虫需要学习的知识"></a>爬虫需要学习的知识</h3><ol>
+<li>HTML</li>
+<li>HTTP/HTTPS 协议</li>
+<li>正则表达式</li>
+<li>数据库</li>
+<li>抓包工具</li>
+<li>爬虫框架</li>
+<li>分布式</li>
+<li>消息队列</li>
+<li>数据结构和算法</li>
+<li>缓存</li>
+<li>机器学习</li>
+<li>数据分析、数据挖掘</li>
+</ol>
+<h3 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h3><ul>
+<li>html<br>使用 BeautifulSoup、lxml 等库去处理</li>
+<li>xml<br>使用 untangle、xmltodict 等第三方库</li>
+<li>json<br>使用 Python自带的模块 json</li>
+</ul>
+<h3 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h3><p>数据清洗完最终要进行持久化存储，你可以用文件存储，比如CSV文件，也可以用数据库存储，简单的用 sqlite，专业点用 MySQL，或者是分布式的文档数据库 MongoDB，这些数据库对Python都非常友好，有现成的库支持。</p>
+<h3 id="反爬虫"><a href="#反爬虫" class="headerlink" title="反爬虫"></a>反爬虫</h3><p>很多网站都设有反爬虫策略，他们想方设法阻止你用非正常手段获取数据，比如会有各种奇奇怪怪的验证码限制你的请求操作、对请求速度做限制，对IP做限制、甚至对数据进行加密操作，总之，就是为了提高获取数据的成本。这时你需要掌握的知识就要更多了，你需要深入理解 HTTP 协议，你需要理解常见的加解密算法，你要理解 HTTP 中的 cookie，HTTP 代理，HTTP中的各种HEADER。</p>
+<h3 id="数据结构和算法"><a href="#数据结构和算法" class="headerlink" title="数据结构和算法"></a>数据结构和算法</h3><p>进行大规模爬虫，通常都是从一个URL开始爬，然后把页面中解析的URL链接加入待爬的URL集合中，我们需要用到队列或者优先队列来区别对待有些网站优先爬，有些网站后面爬。每爬去一个页面，是使用深度优先还是广度优先算法爬取下一个链接。每次发起网络请求的时候，会涉及到一个DNS的解析过程（将网址转换成IP）为了避免重复地 DNS 解析，我们需要把解析好的 IP 缓存下来。URL那么多，如何判断哪些网址已经爬过，哪些没有爬过，简单点就是是使用字典结构来存储已经爬过的的URL，但是如果碰过海量的URL时，字典占用的内存空间非常大，此时你需要考虑使用 Bloom Filter（布隆过滤器），用一个线程逐个地爬取数据，效率低得可怜，如果提高爬虫效率，是使用多线程，多进程还是协程，还是分布式操作。</p>
+<h3 id="一个静态爬虫的python实现（面向对象写法）"><a href="#一个静态爬虫的python实现（面向对象写法）" class="headerlink" title="一个静态爬虫的python实现（面向对象写法）"></a>一个静态爬虫的python实现（面向对象写法）</h3><p>如果你对爬虫的定义，差不多理解了的话，那么实现一个爬虫需要哪些部分呢？</p>
+<h4 id="url管理器"><a href="#url管理器" class="headerlink" title="url管理器"></a>url管理器</h4><p>既然它要爬取许多页面，那么它怎么知道哪些页面是我还没看的，哪些页面我已经看过了，所以起码要有个 URL管理器</p>
+<h4 id="网页下载器"><a href="#网页下载器" class="headerlink" title="网页下载器"></a>网页下载器</h4><p>你的爬虫是跑在本地的，你想要拿到别人网页上的东西，所以你首先要把这个网页下载下来，所以你也要实现一个 网页下载器</p>
+<h4 id="网页解析器"><a href="#网页解析器" class="headerlink" title="网页解析器"></a>网页解析器</h4><p>如果你写过网页的话，你会很容易知道，你下载下来的网页是html代码，当然也保护css,javascript。而你想要的信息都在HTML标签里，所以你需要一个 网页解析器</p>
+<h4 id="内容输出器"><a href="#内容输出器" class="headerlink" title="内容输出器"></a>内容输出器</h4><p>现在数据已经拿到了，那么数据是往数据库存呢，还是往文本文件写呢，或者直接展示到html文件呢？看你心情，看你需求。所以你同时需要一个内容输出器</p>
+<h4 id="爬虫调度器"><a href="#爬虫调度器" class="headerlink" title="爬虫调度器"></a>爬虫调度器</h4><p>现在一个静态爬虫需要的部分，你都有了，那么谁先运行，谁后运行，运行到什么时候为止，这样你就需要一个 爬虫调度器 ，来作为程序入口</p>
+<h4 id="用到的python库"><a href="#用到的python库" class="headerlink" title="用到的python库"></a>用到的python库</h4><ol>
+<li>urllib 下载网页的</li>
+<li>BeautifulSoup 解析网页的</li>
+</ol>
+<h3 id="爬虫常用库"><a href="#爬虫常用库" class="headerlink" title="爬虫常用库"></a>爬虫常用库</h3><ul>
+<li>urllib、urlib2（Python3中的urllib）python内建的网络请求库</li>
+<li>urllib3：线程安全的HTTP网络请求库</li>
+<li>requests：使用最广泛的网络请求库，兼容py2和py3</li>
+<li>grequests：异步的requests</li>
+<li>BeautifulSoup：HTML、XML操作解析库</li>
+<li>lxml：另一种处理 HTML、XML的方式</li>
+<li>tornado：异步网络框架</li>
+<li>Gevent：异步网络框架</li>
+<li>Scrapy：最流行的爬虫框架</li>
+<li>pyspider：爬虫框架</li>
+<li>xmltodict：xml转换成字典</li>
+<li>pyquery：像jQuery一样操作HTML</li>
+<li>Jieba ：分词</li>
+<li>SQLAlchemy：ORM框架</li>
+<li>celery ：消息队列</li>
+<li>rq：简单消息队列</li>
+<li>python-goose ：从HTML中提取文本</li>
+</ul>
+<h3 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h3><ul>
+<li>《图解HTTP》</li>
+<li>《HTTP权威指南》</li>
+<li>《计算机网络：自顶向下方法》</li>
+<li>《用Python写网络爬虫》</li>
+<li>《Python网络数据采集》</li>
+<li>《精通正则表达式》</li>
+<li>《Python入门到实践》</li>
+<li>《自己动手写网络爬虫》</li>
+<li>《Crypto101》</li>
+<li>《图解密码技术》</li>
+</ul>
+<h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><p><a href="http://cuiqingcai.com/1052.html" target="_blank" rel="external">Python爬虫学习系列教程</a><br><a href="https://github.com/lining0806/PythonSpiderNotes" target="_blank" rel="external">Python入门网络爬虫之精华版</a><br><a href="https://foofish.net/understand-http.html" target="_blank" rel="external">爬虫入门系列</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/24/python/python安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张利明">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myblog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/24/python/python安装/" itemprop="url">python安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-24T10:19:49+08:00">
+                2017-08-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="windows下安装"><a href="#windows下安装" class="headerlink" title="windows下安装"></a>windows下安装</h3><ol>
+<li>下载安装包 <a href="https://www.python.org/downloads/" target="_blank" rel="external">https://www.python.org/downloads/</a></li>
+<li>安装 默认安装路径：C:\python35</li>
+<li>配置环境变量<br>【右键计算机】–&gt;&gt;【属性】–&gt;&gt;【高级系统设置】–&gt;&gt;【高级】–&gt;&gt;【环境变量】<br>【将python安装路径添加到变量名为Path】</li>
+</ol>
+<h3 id="linux下安装"><a href="#linux下安装" class="headerlink" title="linux下安装"></a>linux下安装</h3><h3 id="Python-第三方库安装技巧"><a href="#Python-第三方库安装技巧" class="headerlink" title="Python 第三方库安装技巧"></a>Python 第三方库安装技巧</h3><h4 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h4><p>很多第三方库都是开源的，几乎都可以在github 或者 pypi上找到源码。找到源码格式大概都是 zip 、 tar.zip、 tar.bz2格式的压缩包。解压这些包，进入解压好的文件夹，通常会看见一个 setup.py 的文件。打开命令行，进入该文件夹。运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python setup.py install</div></pre></td></tr></table></figure>
+<h4 id="包管理器-（pip-和-easy-install）"><a href="#包管理器-（pip-和-easy-install）" class="headerlink" title="包管理器 （pip 和 easy_install）"></a>包管理器 （pip 和 easy_install）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">pip install flask # 安装</div><div class="line">pip uninstall flask # 卸载</div><div class="line">pip list # 查看所安装的包，包括系统自带的和手动安装的</div><div class="line">pip search flask # 搜索包</div><div class="line">pip freeze &gt; requirements.txt # 重定向输出项目使用的库</div><div class="line">pip install -r requirements.txt</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/23/python/python基础入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张利明">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="myblog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/23/python/python基础入门/" itemprop="url">python基础入门</a></h1>
         
 
         <div class="post-meta">
@@ -344,7 +784,29 @@
       
         
           
-            
+            <h2 id="python语法-python3"><a href="#python语法-python3" class="headerlink" title="python语法 (python3)"></a>python语法 (python3)</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h4 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">name = &quot;Hai Tian&quot;</div></pre></td></tr></table></figure>
+<p>上述代码声明了一个变量，变量名为：name，变量name的值为：”Hai Tian”</p>
+<h4 id="变量定义的规则"><a href="#变量定义的规则" class="headerlink" title="变量定义的规则"></a>变量定义的规则</h4><ul>
+<li>变量名只能是 字母、数字或下划线的任意组合</li>
+<li>变量名的第一个字符不能是数字</li>
+<li>以下关键字不能声明为变量名<br>[‘and’, ‘as’, ‘assert’, ‘break’, ‘class’, ‘continue’, ‘def’, ‘del’, ‘elif’, ‘else’, ‘except’, ‘exec’, ‘finally’, ‘for’, ‘from’, ‘global’, ‘if’, ‘import’, ‘in’, ‘is’, ‘lambda’, ‘not’, ‘or’, ‘pass’, ‘print’, ‘raise’, ‘return’, ‘try’, ‘while’, ‘with’, ‘yield’]</li>
+</ul>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ol>
+<li>单行注释（一个井号） #注释的内容</li>
+<li>多行注释（三个单引号一组） ‘’’ 注释的内容 ‘’’</li>
+</ol>
+<h3 id="指定解释器"><a href="#指定解释器" class="headerlink" title="指定解释器"></a>指定解释器</h3><p>如果想要类似于执行shell脚本一样执行python脚本，例： ./hello.py  ，那么就需要在 hello.py 文件的头部指定解释器，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python3</div><div class="line"></div><div class="line">print &quot;hello,world&quot;</div></pre></td></tr></table></figure>
+<h3 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python3</div><div class="line"></div><div class="line">name = input(&quot;What is your name?&quot;)</div><div class="line">print(&quot;Hello &quot; + name )</div></pre></td></tr></table></figure>
+<p>输入密码时，如果想要不可见，需要利用getpass 模块中的 getpass方法，即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python3</div><div class="line"></div><div class="line">import getpass</div><div class="line"></div><div class="line"># 将用户输入的内容赋值给 name 变量</div><div class="line">pwd = getpass.getpass(&quot;请输入密码：&quot;)</div><div class="line"></div><div class="line"># 打印输入的内容</div><div class="line">print(pwd)</div></pre></td></tr></table></figure>
+<h3 id="模块初识"><a href="#模块初识" class="headerlink" title="模块初识"></a>模块初识</h3><p>Python的强大之处在于他有非常丰富和强大的标准库和第三方库，几乎你想实现的任何功能都有相应的Python库支持</p>
+<p>sys</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python3</div><div class="line"></div><div class="line">import sys</div><div class="line"></div><div class="line">print(sys.argv)</div><div class="line"></div><div class="line">#输出</div><div class="line">$ python test.py helo world</div><div class="line">[&apos;test.py&apos;, &apos;helo&apos;, &apos;world&apos;]  #把执行脚本时传递的参数获取到了</div></pre></td></tr></table></figure>
+<p>os</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python3</div><div class="line"></div><div class="line">import os</div><div class="line"></div><div class="line">os.system(&quot;df -h&quot;) #调用系统命令</div></pre></td></tr></table></figure>
+<h3 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h3><p><a href="http://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="external">python3教程</a></p>
+
           
         
       
@@ -618,7 +1080,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
